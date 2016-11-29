@@ -8,13 +8,15 @@ def outfit_counter(tops, bottoms, dresses):
 tops = float(raw_input("How many tops? "))
 bottoms = float(raw_input("How many bottoms? "))
 dresses = float(raw_input("How many dresses? "))
-outfits = outfit_counter(tops, bottoms, dresses)
+outfits = int(outfit_counter(tops, bottoms, dresses))
 
-days = raw_input("How many days are you packing for?")
+days = int(raw_input("How many days are you packing for?"))
+laundry_trips = days / outfits
 if days <= outfits:
     print "You will not need to do laundry."
+elif days % outfits == 0:
+    print "You will need to do laundry %s times." % (laundry_trips - 1)
 else:
-    laundry_trips = days / outfits
     print "You will need to do laundry %s times." % (laundry_trips)
 
 #laundry = int(raw_input("How many times will you do laundry? "))
