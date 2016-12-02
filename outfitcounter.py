@@ -10,7 +10,7 @@ bottoms = float(raw_input("How many bottoms? "))
 dresses = float(raw_input("How many dresses? "))
 outfits = int(outfit_counter(tops, bottoms, dresses))
 
-days = int(raw_input("How many days are you packing for?"))
+days = int(raw_input("How many days are you packing for? "))
 laundry_trips = days / outfits
 if days <= outfits:
     print "You will not need to do laundry."
